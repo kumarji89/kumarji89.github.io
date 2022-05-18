@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+@import "../bootstrap-4.6.1/scss/bootstrap.scss"; 
+
+$fa-font-path: "../fonts/fontawesome/webfonts";
+@import "../fonts/fontawesome/scss/fontawesome.scss";
+@import "../fonts/fontawesome/scss/solid.scss";
+@import "../fonts/fontawesome/scss/regular.scss";
+@import "../fonts/fontawesome/scss/brands.scss";
+
+
+$gl-brand-navy: #000C66;
+$gl-brand-red: #DE0D26;
+$gl-blue900: #0D194F;
+$gl-blue800: #132367;
+$gl-blue700: #0E398D;
+$gl-blue600: #0A4FB3;
+$gl-blue500: #0565D9;
+$gl-blue400: #007BFF;
+$gl-blue300: #4AA1FF;
+$gl-blue200: #A0CDFE;
+$gl-blue100: #D2E9FF;
+$gl-blue50: #E5F1FF;
+$gl-gray900: #3D4956;
+$gl-gray700: #414149;
+$gl-gray500: #48749B;
+$gl-gray400: #7492AC;
+$gl-gray300: #C3CCDA;
+$gl-gray200: #E5EBF2;
+$gl-gray100: #F8F9FA;
+$gl-lightgray: #b1b0b0;
+$gl-gray0: #FFFFFF;
+$gl-bluegray: #e4ebf3;
+
+$gl-text-primary: #004085;
+$gl-text-secondary: #38759f;
+$gl-text-success: #155724;
+$gl-text-info: #0C5460;
+$gl-text-warning: #856404;
+$gl-text-danger: #721C24;
+$gl-text-light: #818182;
+$gl-text-dark: #1B1E21;
+
+$gl-border-primary: #BFDFFF;
+$gl-border-secondary: #38759f;
+$gl-border-success: #BDE6D0;
+$gl-border-info: #C6ECF9;
+$gl-border-warning: #FFEBC7;
+$gl-border-danger: #F5BCC9;
+$gl-border-light: #FDFDFE;
+$gl-border-dark: #BECED5;
+
+$gl-alert-primary: #D2E9FF;
+$gl-alert-secondary: #E3E9EE;
+$gl-alert-success: #D1EEDE;
+$gl-alert-info: #D7F2FB;
+$gl-alert-warning: #FFF1D7;
+$gl-alert-danger: #F9D0D9;
+$gl-alert-light: #FEFEFE;
+$gl-alert-dark: #CDD6DA;
+
+$gl-primary: $gl-blue400;
+$gl-secondary: $gl-gray500;
+$gl-success: #18A957;
+$gl-danger: $gl-brand-red;
+$gl-warning: #FFBB38;
+$gl-info: #36BCED;
+$gl-light: $gl-gray100;
+$gl-dark: $gl-gray900;
+$gl-link: #006EE3;
+
+$gl-disabled: #6C757D;
+
+$rounded-radius: 8px;
+
+$theme-colors: (
+    "gl-blue900":$gl-blue900,
+    "gl-blue800":$gl-blue800,
+    "gl-blue700":$gl-blue700,
+    "gl-blue600":$gl-blue600,
+    "gl-blue500":$gl-blue500,
+    "gl-blue400":$gl-blue400,
+    "gl-blue300":$gl-blue300,
+    "gl-blue200":$gl-blue200,
+    "gl-blue100":$gl-blue100,
+    "gl-blue50":$gl-blue50,
+    "gl-gray900":$gl-gray900,
+    "gl-gray700":$gl-gray700,
+    "gl-gray500":$gl-gray500,
+    "gl-gray400":$gl-gray400,
+    "gl-gray300":$gl-gray300,
+    "gl-gray200":$gl-gray200,
+    "gl-gray100":$gl-gray100,
+    "gl-lightgray":$gl-lightgray,
+    "gl-brand-navy":$gl-brand-navy,
+    "gl-brand-red":$gl-brand-red,
+    "gl-disabled":$gl-disabled,
+    "gl-light":$gl-gray100,
+    "primary": $gl-primary,
+    "secondary": $gl-secondary,
+    "success": $gl-success,
+    "info": $gl-info,
+    "warning": $gl-warning,
+    "danger": $gl-danger,
+    "light": $gl-light,
+    "dark": $gl-dark,
+    "gl-primary":$gl-text-primary
+);
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px
+) !default;
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1440px
+) !default;
+
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    0: 0%,
+    10: 10%,
+    15: 15%,
+    20: 20%,
+    25: 25%,
+    30: 30%,
+    35: 35%,
+    40: 40%,
+    45: 45%,
+    50: 50%,
+    55: 55%,
+    60: 60%,
+    65: 65%,
+    70: 70%,
+    75: 75%,
+    80: 80%,
+    85: 85%,
+    90: 90%,
+    95: 95%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);
+
+$gl-colours:
+    "primary" $gl-alert-primary $gl-text-primary $gl-border-primary,
+    "secondary" $gl-alert-secondary $gl-text-secondary $gl-border-secondary,
+    "success" $gl-alert-success $gl-text-success $gl-border-success,
+    "info" $gl-alert-info $gl-text-info $gl-border-info,
+    "warning" $gl-alert-warning $gl-text-warning $gl-border-warning,
+    "danger" $gl-alert-danger $gl-text-danger $gl-border-danger,
+    "light" $gl-alert-light $gl-text-light $gl-border-light,
+    "dark" $gl-alert-dark $gl-text-dark $gl-border-dark;
+
+$rounded-radius: 8px;
+
+@each $i in $gl-colours{
+    .alert-#{nth($i, 1)} {
+        background: nth($i, 2);
+        color:nth($i, 3);
+        border-color:nth($i, 4);
+    }
+}
+
+$gl-font-size: 9px,10px,11px,12px,13px,14px,15px,16px,17px,18px,19px,20px,21px,22px,23px,24px,25px,26px,27px,28px,29px,30px,35px,40px,45px,50px;
+
+@each $i in $gl-font-size{
+  .font-#{nth($i, 1)} {
+      font-size: $i !important;
+      line-height: $i * 1.25;
+  }
+}
+
+@each $i in $gl-font-size{
+    .line-height-#{nth($i, 1)} {
+        line-height: $i;
+    }
+}
+
+@for $i from 1 through 9 {
+    .font-weight-#{$i * 100} {
+        font-weight: $i * 100;
+    }
+}
+
+/////////////////////
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{line-height: inherit;}
+*, h1, h2,h3,h4,h5,h6{font-family: 'Open Sans', sans-serif, 'Font Awesome 6 free', Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; font-size: 13px;}
+
+// *{transition: 2s; }
+body{background: #eee;}
+.outerContainer{padding-top: 50px;}
+.topNavigation{ background:#fff; border-bottom: 1px solid #c7c7c7; position: fixed; top: 0; left: 0; width: 100%;
+    nav{ display: flex; align-items: center; height: 46px;
+        .navbar-brand{display: flex;}
+        .topNavbar{margin-left: 20px; display: flex; justify-content: space-between; align-items: center; width: 100%; position: relative;
+            .navRight{display: flex; justify-content: flex-end;}
+            .mobileMenu{display: none;  padding: 10px;}
+            .navbarList{list-style: none; margin: 0; padding: 0;
+                > li{ display: inline-block;
+                    &:hover{
+                        &::after{content: ''; position: relative; border-bottom:3px solid #555; top: 0px; width: 100%; height: 2px; display: block;}
+                        .dropdownNav{display: block;}
+                    }
+                    a{font-weight: 500; color: #454545; padding: 14px;}
+                    i.fa-solid{font-size:10px; margin-left: 5px;}
+                    .dropdownNav{ display: block; position: absolute; top: 49px; left: 0; width: 100%; max-width: 820px; background: #fff; padding: 10px;  border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; box-shadow: 0px 1px 5px #ccc; transition: 0.5s;
+                        .ddColumn{ display: flex; flex-wrap: wrap;
+                            .ddCategory{ margin-bottom: 15px; width: 200px;
+                                .ddColumnTitle{color: #709ef4; font-size: 13px; font-weight: 600; padding: 3px; margin: 0;}
+                                ul{list-style: none; margin: 0; padding: 0;
+                                    li{list-style: none; margin: 0; font-size: 12px; width: 100%;
+                                        a{ color: #454545; font-size: 12px; padding:3px; display: inline-block;}
+                                        .viewAll{border-bottom: 1px dashed #454545; text-transform: capitalize; text-decoration: none;
+                                            &:hover{border-bottom: 1px solid #454545;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navRight{
+                button{font-size: 12px; margin-left: 10px; padding: 3px 10px;}
+            }
+        }
+    }
+}
+
+
+// media query
+@media (max-width: 1200px){
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1140px !important; padding: 0 10px;
+    }
+}
+
+@media (max-width: 860px){
+    .topNavigation nav {
+        .topNavbar{ flex-direction: row-reverse; justify-content: normal;
+            .navbarList{display: none; position: absolute; top: 42px; right: -10px; width: 430px; border: 1px solid #ccc; border-right: none; z-index: 2; background: #fff;
+                // &::after{content:''; display: block; position: fixed; left:0; top:46px; height: calc(100vh - 46px); background: #fff; opacity: 0.5; width: calc(100% - 300px); z-index: 1;}
+                > li {width: 140px;
+                    .dropdownNav{ max-width: 420px; height: calc(100vh - 100px); overflow: auto; top:40px;
+                        a{display:flex; justify-content: space-between;}
+                    }
+                }
+            }
+            .mobileMenu {
+                display: inline-flex; 
+                i{font-size: 18px;}
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px){
+    .topNavigation nav .topNavbar .navbarList>li .dropdownNav{
+        max-width: 620px; transition: 0.5s;
+    }
+}
+
+@media (max-width: 480px){
+    .topNavigation nav {
+        .topNavbar{ flex-direction: row-reverse; justify-content: normal;
+            .navbarList{display: none; position: absolute; top: 89px; right: -10px; width: calc(100vw - -1px); border: 1px solid #ccc; border-right: none; z-index: 2; background: #fff;
+                > li {width: 30%;
+                    a{padding: 10px;}
+                    .dropdownNav{ max-width: 100%; height: calc(100vh - 150px); overflow: auto;
+                        a{display:flex; justify-content: space-between;}
+                        .ddColumn .ddCategory {
+                            margin-bottom: 15px;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .navRight{
+                position: absolute; width: calc(100vw - 0px); padding: 10px; background: #fffbf0; right: -10px; top: 43px; display: flex; justify-content: space-between;
+                button{margin:0 10px 0 0;
+                    &:last-child{margin:0;}
+                    &.signIn{background: #fff;}
+                }
+            }
+        }
+        .navbar-brand{
+            img{width: 160px; height: auto;}
+        }
+        .topNavbar  button{
+            margin-left: 0px;
+        }
+    }
+}
+
+@media (max-width: 330px){
+    .topNavigation nav .topNavbar{
+        .navRight{padding: 10px 7px;
+            .navbarList>li a{}
+            button{margin: 0 5px 0 0;}
+        }
+    }
+}
